@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+
+{% block main%}
+<div id="profile_card_top">
+        <div class="tc_container">
+            <image id="prof_img" src = {{ userdata["profile_url"] }} id = 'profile_pic'/>
+        </div>
+        <div class="tc_container">
+            <span id="fullname">{{ userdata["fullname"] }}</span>
+        </div>
+        <div class="tc_container">
+            <span id="username">@{{ userdata['username'] }}</span>
+        </div>
+        <div class="tc_container">
+            <span id="location">{{ userdata['location']}}</span>
+        </div>
+        <div class="tc_container">
+            <span id="join_date">{{ userdata['join_date']}}</span>
+        </div>
+    </div>
+    <div id="profile_card_bottom">
+        <div>
+            <span id="short_bio">{{ userdata['s_bio']}}</span>
+        </div>
+        
+        <span id="no_of_posts">{{ userdata['no_of_posts']}}</span>
+        <label class='lower_card_label' for="no_of_posts">Posts</label>
+        <span id="no_following">{{ userdata['no_following']}}</span>
+        <label class='lower_card_label' for="no_following">Following</label>
+        <span id="no_of_followers">{{ userdata['no_of_followers']}}</span>
+        <label class='lower_card_label' for="no_of_followers">Following</label>
+    </div>
+{% endblock %}

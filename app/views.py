@@ -17,7 +17,22 @@ from flask import render_template, request, redirect, url_for, flash
 def home():
     """Render website's home page."""
     return render_template('home.html')
-
+    
+@app.route('/profile')
+def profile():
+    userData = {
+        'profile_url': url_for('static', filename='images/user_profile_img.jpg'),
+        'fullname': 'Javed Wright',
+        'username': 'shadow',
+        'location': 'Kingston, Jamaica',
+        'join_date': 'Febuary, 2018',
+        's_bio': "I am a student.",
+        'no_of_posts': '23',
+        'no_of_followers': '23',
+        'no_following': '23'
+    }
+    
+    return render_template('profile.html', userdata = userData);
 
 @app.route('/about/')
 def about():
