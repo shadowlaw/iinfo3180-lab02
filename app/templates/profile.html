@@ -19,15 +19,24 @@
         </div>
     </div>
     <div id="profile_card_bottom">
-        <div>
+        <div class='bc_container'>
             <span id="short_bio">{{ userdata['s_bio']}}</span>
         </div>
-        
-        <span id="no_of_posts">{{ userdata['no_of_posts']}}</span>
-        <label class='lower_card_label' for="no_of_posts">Posts</label>
-        <span id="no_following">{{ userdata['no_following']}}</span>
-        <label class='lower_card_label' for="no_following">Following</label>
-        <span id="no_of_followers">{{ userdata['no_of_followers']}}</span>
-        <label class='lower_card_label' for="no_of_followers">Following</label>
+        <div class="bc_container">
+            <div class='row'>
+                <div class="col">
+                    <span id="no_of_posts">{{ userdata['no_of_posts']}}</span>
+                    <label class='lower_card_label' for="no_of_posts">Posts</label>                    
+                </div>
+                <div class="col">
+                    <span id="no_following">{{ userdata['no_following']}}</span>
+                    <label class='lower_card_label' for="no_following">Following</label>
+                </div>
+                <div class="col">
+                    <span id="no_of_followers">{{ userdata['no_of_followers']}}</span>
+                    <label class='lower_card_label' for="no_of_followers">Following</label>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
