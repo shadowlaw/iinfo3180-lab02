@@ -4,7 +4,7 @@ Jinja2 Documentation:    http://jinja.pocoo.org/2/documentation/
 Werkzeug Documentation:  http://werkzeug.pocoo.org/documentation/
 This file creates your application.
 """
-
+import datetime
 from app import app
 from flask import render_template, request, redirect, url_for, flash
 
@@ -25,7 +25,7 @@ def profile():
         'fullname': 'Javed Wright',
         'username': 'shadow',
         'location': 'Kingston, Jamaica',
-        'join_date': 'Febuary, 2018',
+        'join_date': format_date_joined(),
         's_bio': "I am a student.",
         'no_of_posts': '23',
         'no_of_followers': '23',
@@ -33,6 +33,9 @@ def profile():
     }
     
     return render_template('profile.html', userdata = userData);
+
+def format_date_joined():
+    return datetime.date(2018,2,2).strftime("%B, %Y")
 
 @app.route('/about/')
 def about():
