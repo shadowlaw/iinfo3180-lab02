@@ -55,3 +55,13 @@ body {
 .bc_container span{
     display: block;
 }
+
+#follow_btn{
+    border-radius: 10px;
+    width: 55%;
+    text-align: center;
+    background: #00b8ff;
+    border-radius: 10px;
+    height: 35px;
+    color: white;
+}
